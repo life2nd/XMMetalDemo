@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Abq-DH-muD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XMMetalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="house" catalog="system" id="bzt-wF-UQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="-124"/>
+        </scene>
+        <!--视频-->
+        <scene sceneID="gQw-bW-MLu">
+            <objects>
+                <viewController id="hgy-f4-KHP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DS9-kW-e4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Qi-Ad-B9h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="视频" image="video" catalog="system" id="mNE-RF-HYs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMV-RT-t8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="8"/>
+        </scene>
+        <!--音频相关-->
+        <scene sceneID="tfk-dL-Lzx">
+            <objects>
+                <tableViewController id="kYr-6X-MDZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="iGY-hh-3vK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="yvB-YJ-8bU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="cwF-IR-G9d">
+                                        <rect key="frame" x="20" y="18" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cwF-IR-G9d" id="u1a-pA-Iha">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="本地音频播放"/>
+                                        <connections>
+                                            <segue destination="yKz-9L-49H" kind="show" id="nDu-3e-eai"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kYr-6X-MDZ" id="BVN-Pk-Ejz"/>
+                            <outlet property="delegate" destination="kYr-6X-MDZ" id="Pw2-eh-VXU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="音频相关" id="FFZ-YU-dnn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYc-dq-TSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704.5801526717555" y="-292.25352112676057"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="M4t-Ly-trB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Abq-DH-muD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NZ6-jk-Vwh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWK-Dc-fJv"/>
+                        <segue destination="hgy-f4-KHP" kind="relationship" relationship="viewControllers" id="FJK-gf-3iv"/>
+                        <segue destination="Coh-7V-8Xx" kind="relationship" relationship="viewControllers" id="v9S-mM-gSx"/>
+                        <segue destination="haR-56-KIK" kind="relationship" relationship="viewControllers" id="OOq-P1-Bs1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvl-o8-esy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="-109.1549295774648"/>
+        </scene>
+        <!--音频-->
+        <scene sceneID="ZoB-Rc-PBV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="haR-56-KIK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="音频" image="airpodsmax" catalog="system" id="x6M-Z8-ajH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Acc-rO-doF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kYr-6X-MDZ" kind="relationship" relationship="rootViewController" id="CdN-oL-R33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBt-Wg-ntn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777.8625954198474" y="-292.25352112676057"/>
+        </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="f9g-2g-BVR">
+            <objects>
+                <viewController id="yKz-9L-49H" customClass="XMAudioViewController" customModule="XMMetalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MDh-Ta-Hdl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" id="Ajv-GN-Q1M">
+                                <rect key="frame" x="40" y="139" width="312" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音频信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-SN-wWc">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3ki-ed-ihx">
+                                        <rect key="frame" x="-2" y="98" width="316" height="31"/>
+                                        <connections>
+                                            <action selector="handleSeekAction:" destination="yKz-9L-49H" eventType="editingDidEnd" id="ahD-a6-0SC"/>
+                                            <action selector="progressValueChanged:" destination="yKz-9L-49H" eventType="valueChanged" id="9rG-zF-EaE"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-kc-pr4">
+                                        <rect key="frame" x="0.0" y="198.66666666666666" width="312" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g14-yr-vwN">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="backward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="clickSkipPreAction:" destination="yKz-9L-49H" eventType="touchUpInside" id="8NE-Kg-lGy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-pc-GL3">
+                                                <rect key="frame" x="107.33333333333334" y="0.0" width="97.333333333333343" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="play" catalog="system" variableValue="5.5511151231257827e-17"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clickPlayAction:" destination="yKz-9L-49H" eventType="touchUpInside" id="nf9-Z8-89F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-AC-832">
+                                                <rect key="frame" x="214.66666666666666" y="0.0" width="97.333333333333343" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="forward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="clickSkipNextAction:" destination="yKz-9L-49H" eventType="touchUpInside" id="koI-Kg-AzP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1WF-yx-ESL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mby-Ns-Sz3"/>
+                    <connections>
+                        <outlet property="audioBrife" destination="Nw5-SN-wWc" id="SyL-3O-cDE"/>
+                        <outlet property="playBtn" destination="LgL-pc-GL3" id="TKM-RO-n0q"/>
+                        <outlet property="progressSlider" destination="3ki-ed-ihx" id="16h-bS-sgq"/>
+                        <outlet property="skipNextBtn" destination="zfc-AC-832" id="QX0-Wg-qgx"/>
+                        <outlet property="skipPreBtn" destination="g14-yr-vwN" id="TS9-lz-Rnu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mk-lw-8o0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3536.6412213740455" y="-292.25352112676057"/>
+        </scene>
+        <!--雪花-->
+        <scene sceneID="3PS-xd-TJn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Coh-7V-8Xx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="雪花" image="snowflake" catalog="system" id="xSF-f2-w1m"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XXA-aL-8uc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hQv-vI-5o3" kind="relationship" relationship="rootViewController" id="vWn-GK-kAG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRq-4U-Ocz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220.6106870229005" y="419.71830985915494"/>
+        </scene>
+        <!--雪花-->
+        <scene sceneID="puw-ec-wdH">
+            <objects>
+                <tableViewController id="hQv-vI-5o3" customClass="XMSnowFlakeViewController" customModule="XMMetalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="LHS-gG-Wgo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="RFh-6l-lAL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KPa-x0-MZL">
+                                        <rect key="frame" x="20" y="18" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KPa-x0-MZL" id="6AU-We-6Gb">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 1" secondaryText="Hello Metal !" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="mQ9-Bk-u7Z">
+                                        <rect key="frame" x="20" y="64.333332061767578" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mQ9-Bk-u7Z" id="c3s-W0-zaK">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 2" secondaryText="3D Models" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="R31-db-JO3">
+                                        <rect key="frame" x="20" y="110.66666412353516" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R31-db-JO3" id="CNO-Tj-2QJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 3" secondaryText="The Rendering Pipeline" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="XXC-wF-O2D">
+                                        <rect key="frame" x="20" y="156.99999618530273" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XXC-wF-O2D" id="qh7-n8-v0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 4" secondaryText="The Vertex Function" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="W5B-jH-7UR">
+                                        <rect key="frame" x="20" y="203.33332824707031" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W5B-jH-7UR" id="7RW-0C-3eZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 5" secondaryText="3D Transformations" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="jjS-jD-bsE">
+                                        <rect key="frame" x="20" y="249.66666030883789" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jjS-jD-bsE" id="NLU-LR-lSf">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 6" secondaryText="Coordinate Spaces" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="hQv-vI-5o3" id="UY4-Oy-2Bw"/>
+                            <outlet property="delegate" destination="hQv-vI-5o3" id="xtB-QA-Lhy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="雪花" id="JLj-D6-2s0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsB-a8-GPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948.8549618320608" y="573.94366197183103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airpodsmax" catalog="system" width="128" height="122"/>
+        <image name="backward" catalog="system" width="128" height="77"/>
+        <image name="forward" catalog="system" width="128" height="77"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="play" catalog="system" width="117" height="128"/>
+        <image name="snowflake" catalog="system" width="119" height="128"/>
+        <image name="video" catalog="system" width="128" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
