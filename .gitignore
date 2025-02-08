@@ -1,0 +1,45 @@
+.DS_Store
+*/.DS_Store
+.svn
+xcuserdata
+#xcshareddata
+ting.xcodeproj/project.xcworkspace
+#contents.xcworkspacedata
+UserInterfaceState.xcuserstate
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+Pods/
+Podfile.lock
+Breakpoints_v2.xcbkptlist
+fastlane/
+githooks/config
+
+# App Code
+.idea
+Build/
+Products
+framework_build
+build.py
+pod_build.py
+buildLib
+AutoFiles
+tmp_build_dir_path.json
+xmly_framework.lock
+*.pyc
+
+Podfile.min.plist
+DerivedData
+jenkinsbuildscript
+yunxiaoPackageLib
+yunxiaoPackage.py
+yunxiaoPackage.sh
+resign
+component.plist
+.vscode/
+
+XMPlayingLeekEnabled.h
+*/XMPlayingLeekEnabled.h
