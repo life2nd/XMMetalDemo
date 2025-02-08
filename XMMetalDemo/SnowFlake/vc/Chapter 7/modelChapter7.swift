@@ -16,7 +16,7 @@ class ModelChapter7: Transformable {
         guard let assetURL = Bundle.main.url(forResource: name, withExtension: nil) else { fatalError() }
         
         let allocator = MTKMeshBufferAllocator(device: device)
-        let asset = MDLAsset(url: assetURL, vertexDescriptor: .defaultLayoutChaptor6, bufferAllocator: allocator)
+        let asset = MDLAsset(url: assetURL, vertexDescriptor: .defaultLayoutChaptor7, bufferAllocator: allocator)
         
         guard let mdlMesh = asset.childObjects(of: MDLMesh.self).first as? MDLMesh else { fatalError() }
         
@@ -37,7 +37,7 @@ extension ModelChapter7 {
         encoder.setVertexBuffer(mesh.vertexBuffers[0].buffer, offset: 0, index: 0)
         
         for subMesh in mesh.submeshes {
-            encoder.drawIndexedPrimitives(type: .line,
+            encoder.drawIndexedPrimitives(type: .triangle,
                                           indexCount: subMesh.indexCount,
                                           indexType: subMesh.indexType,
                                           indexBuffer: subMesh.indexBuffer.buffer,

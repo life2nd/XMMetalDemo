@@ -16,4 +16,10 @@ typedef struct {
     matrix_float4x4 projectionMatrix;
 } UniformsChapter7;
 
+typedef struct {
+    uint screenScale;
+    uint width;
+    uint height;
+} ParamsChatper7;
+
 #endif /* shaderChapter7Common_h */

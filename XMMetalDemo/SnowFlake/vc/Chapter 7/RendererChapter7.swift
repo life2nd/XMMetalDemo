@@ -21,6 +21,8 @@ class RendererChapter7: NSObject {
     
     var timer: Float = 0
     var uniform = UniformsChapter7()
+    var params = ParamsChatper7()
+    let depthStencilState: MTLDepthStencilState?
     
     init(metalView: MTKView) {
         guard let device = MTLCreateSystemDefaultDevice(),
@@ -30,6 +32,7 @@ class RendererChapter7: NSObject {
         Renderer.device = device
         Renderer.commandQueue = commandQueue
         metalView.device = device
+        metalView.depthStencilPixelFormat = .depth32Float
         
         let library = device.makeDefaultLibrary()
         Self.library = library
@@ -38,22 +41,33 @@ class RendererChapter7: NSObject {
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
+        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
         pipelineDescriptor.vertexFunction = vertexFunc
         pipelineDescriptor.fragmentFunction = fragmentFunc
-        pipelineDescriptor.vertexDescriptor = .defaultLayoutChaptor6
+        pipelineDescriptor.vertexDescriptor = .defaultLayoutChaptor7
         do {
             pipelineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
         } catch {
             fatalError()
         }
         
+        self.depthStencilState = Self.buildDepthStencilState()
         super.init()
         
         metalView.clearColor = MTLClearColor(red: 1.0, green: 1.0, blue: 0.9, alpha: 1.0)
         metalView.delegate = self
         
         uniform.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
+        
+        params.screenScale = uint(UIScreen.main.scale)
         mtkView(metalView, drawableSizeWillChange: metalView.bounds.size)
+    }
+    
+    static func buildDepthStencilState() -> MTLDepthStencilState? {
+        let depthStencilStateDescriptor = MTLDepthStencilDescriptor()
+        depthStencilStateDescriptor.depthCompareFunction = .less
+        depthStencilStateDescriptor.isDepthWriteEnabled = true
+        return Renderer.device.makeDepthStencilState(descriptor: depthStencilStateDescriptor)
     }
 }
 
@@ -65,6 +79,9 @@ extension RendererChapter7: MTKViewDelegate {
                                         far: 100,
                                         aspect: aspect)
         uniform.projectionMatrix = projectionMatrix
+        
+        params.width = uint(size.width)
+        params.height = uint(size.height)
     }
     
     func draw(in view: MTKView) {
@@ -74,6 +91,7 @@ extension RendererChapter7: MTKViewDelegate {
         else { return }
         
         renderEncoder.setRenderPipelineState(pipelineState)
+        renderEncoder.setDepthStencilState(depthStencilState)
         
         timer += 0.005
         uniform.viewMatrix = float4x4(translation: [0, 0, -3]).inverse
@@ -83,6 +101,7 @@ extension RendererChapter7: MTKViewDelegate {
         uniform.modelMatrix = model.transform.modelMatrix
         
         renderEncoder.setVertexBytes(&uniform, length: MemoryLayout<UniformsChapter7>.stride, index: 11)
+        renderEncoder.setFragmentBytes(&params, length: MemoryLayout<ParamsChatper7>.stride, index: 12)
         
         model.render(encoder: renderEncoder)
         
