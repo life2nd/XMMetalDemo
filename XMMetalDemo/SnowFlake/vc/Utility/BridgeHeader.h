@@ -10,5 +10,6 @@
 
 #import "shaderChapter6Common.h"
 #import "shaderChapter7Common.h"
+#import "CommonChapter8.h"
 
 #endif /* BridgeHeader_h */
