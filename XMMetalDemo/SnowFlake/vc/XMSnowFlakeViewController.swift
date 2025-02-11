@@ -45,6 +45,9 @@ extension XMSnowFlakeViewController {
         else if index == 6 {
             vc = XMSnowFlakeChapter7ViewController()
         }
+        else if index == 7 {
+            vc = XMSnowFlakeChapter8ViewController()
+        }
         
         guard let vc = vc else { return }
         vc.hidesBottomBarWhenPushed = true

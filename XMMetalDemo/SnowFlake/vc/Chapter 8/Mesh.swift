@@ -19,8 +19,8 @@ extension Mesh {
             vertexBuffers.append(mtkMeshBuffer.buffer)
         }
         self.vertexBuffers = vertexBuffers
-        submeshes = zip(mdlMesh.submeshes!, mtkMesh.submeshes).map({ mesh in
-            Submesh(mdlSubmesh: mesh, mtkSubMesh: <#T##MTKSubmesh#>)
-        })
+        submeshes = zip(mdlMesh.submeshes!, mtkMesh.submeshes).map { mesh in
+            Submesh(mdlSubmesh: mesh.0 as! MDLSubmesh, mtkSubMesh: mesh.1)
+        }
     }
 }

@@ -22,16 +22,16 @@ typedef struct {
 } ParamsChapter8;
 
 typedef enum {
-    VertexBuffer = 0,
-    UVBuffer = 1,
-    UniformsBuffer = 11,
-    ParamsBuffer = 12
-} BufferIndices;
+    VertexBufferChapter8 = 0,
+    UVBufferChapter8 = 1,
+    UniformsBufferChapter8 = 11,
+    ParamsBufferChapter8 = 12
+} BufferIndicesChapter8;
 
 typedef enum {
-    Position = 0,
-    Normal = 1,
-    UV = 2
-} Attributes;
+    PositionChapter8 = 0,
+    NormalChapter8 = 1,
+    UVChapter8 = 2
+} AttributesChapter8;
 
 #endif /* CommonChapter8_h */

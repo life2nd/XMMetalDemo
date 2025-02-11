@@ -19,6 +19,9 @@
 		B61D584A2D5631040081AAD5 /* modelChapter7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D58492D5631040081AAD5 /* modelChapter7.swift */; };
 		B61D584C2D5631340081AAD5 /* RendererChapter7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D584B2D5631340081AAD5 /* RendererChapter7.swift */; };
 		B61D584F2D5631B60081AAD5 /* VertexDescriptorChapter7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D584E2D5631B60081AAD5 /* VertexDescriptorChapter7.swift */; };
+		B622FB532D5B2029002DF972 /* VertexDescriptorChapter8.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FB522D5B2029002DF972 /* VertexDescriptorChapter8.swift */; };
+		B622FB552D5B29AE002DF972 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FB542D5B29AE002DF972 /* Primitive.swift */; };
+		B622FB572D5B313B002DF972 /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B622FB562D5B313B002DF972 /* Rendering.swift */; };
 		B66C1B422D48DC3C00EA4055 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B412D48DC3C00EA4055 /* Transform.swift */; };
 		B66C1B442D48DD8D00EA4055 /* VertexDescriptorChapter6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B432D48DD8D00EA4055 /* VertexDescriptorChapter6.swift */; };
 		B66C1B462D50F77D00EA4055 /* modelChapter6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B452D50F77D00EA4055 /* modelChapter6.swift */; };
@@ -102,6 +105,9 @@
 		B61D584D2D5631920081AAD5 /* shaderChapter7Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaderChapter7Common.h; sourceTree = "<group>"; };
 		B61D584E2D5631B60081AAD5 /* VertexDescriptorChapter7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorChapter7.swift; sourceTree = "<group>"; };
 		B61D58502D5634270081AAD5 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		B622FB522D5B2029002DF972 /* VertexDescriptorChapter8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorChapter8.swift; sourceTree = "<group>"; };
+		B622FB542D5B29AE002DF972 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		B622FB562D5B313B002DF972 /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
 		B66C1B412D48DC3C00EA4055 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		B66C1B432D48DD8D00EA4055 /* VertexDescriptorChapter6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorChapter6.swift; sourceTree = "<group>"; };
 		B66C1B452D50F77D00EA4055 /* modelChapter6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelChapter6.swift; sourceTree = "<group>"; };
@@ -187,9 +193,12 @@
 				0B9A73382D57AFA600BE04D0 /* CommonChapter8.h */,
 				0B9A73402D57B71600BE04D0 /* shaderChapter8.metal */,
 				0B9A73452D584A0C00BE04D0 /* RendererChapter8.swift */,
+				B622FB562D5B313B002DF972 /* Rendering.swift */,
 				0B9A73472D584D0500BE04D0 /* Model.swift */,
+				B622FB542D5B29AE002DF972 /* Primitive.swift */,
 				0B9A73492D584D4800BE04D0 /* Submesh.swift */,
 				0B9A734B2D584DFF00BE04D0 /* Mesh.swift */,
+				B622FB522D5B2029002DF972 /* VertexDescriptorChapter8.swift */,
 			);
 			path = "Chapter 8";
 			sourceTree = "<group>";
@@ -566,6 +575,7 @@
 				B68D42D22D3A47CF00A6E7FA /* RendererChapter4.swift in Sources */,
 				0B9A734A2D584D4800BE04D0 /* Submesh.swift in Sources */,
 				0B9A73412D57B71600BE04D0 /* shaderChapter8.metal in Sources */,
+				B622FB552D5B29AE002DF972 /* Primitive.swift in Sources */,
 				B6E71EF72D3763770086D303 /* XMSnowFlakeChapter1ViewController.swift in Sources */,
 				B69D1AAA2D375DA1006B95E1 /* XMSnowFlakeViewController.swift in Sources */,
 				B6A7FC522D27C84A001AC074 /* XMAudioViewController.swift in Sources */,
@@ -579,6 +589,7 @@
 				B6A909672D37D5E00085DA34 /* shaderChapter2.metal in Sources */,
 				B61D58482D5630C50081AAD5 /* shaderChapter7.metal in Sources */,
 				B66C1B422D48DC3C00EA4055 /* Transform.swift in Sources */,
+				B622FB532D5B2029002DF972 /* VertexDescriptorChapter8.swift in Sources */,
 				0B9A73482D584D0500BE04D0 /* Model.swift in Sources */,
 				B66C1B482D50FA3900EA4055 /* RendererChapter6.swift in Sources */,
 				B6E71EFA2D3788DF0086D303 /* shader.metal in Sources */,
@@ -596,6 +607,7 @@
 				B6E47C4E2D3101C0006FD306 /* Tools.swift in Sources */,
 				B68D42D62D3A4C7D00A6E7FA /* Quad.swift in Sources */,
 				B68D42CF2D3A47A900A6E7FA /* XMSnowFlakeChapter4ViewController.swift in Sources */,
+				B622FB572D5B313B002DF972 /* Rendering.swift in Sources */,
 				0B9A73462D584A0C00BE04D0 /* RendererChapter8.swift in Sources */,
 				B6A7FC552D27EB5B001AC074 /* XMAudioPlayer.swift in Sources */,
 				B6FFA64E2D3934F00051F4E7 /* shaderChapter3.metal in Sources */,

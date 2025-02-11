@@ -10,7 +10,7 @@ import MetalKit
 
 class XMSnowFlakeChapter8ViewController: UIViewController {
     
-//    var renderer: RendererChapter8?
+    var renderer: RendererChapter8?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class XMSnowFlakeChapter8ViewController: UIViewController {
         metalView.frame = frame
         view.addSubview(metalView)
         
-//        renderer = RendererChapter8(metalView: metalView)
+        renderer = RendererChapter8(metalView: metalView)
     }
 }
 

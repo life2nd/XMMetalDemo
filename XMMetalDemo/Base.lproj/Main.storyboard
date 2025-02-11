@@ -285,6 +285,15 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 7" secondaryText="The Fragment Function" prefersSideBySideTextAndSecondaryText="YES"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="fCs-Rh-ZFy">
+                                        <rect key="frame" x="20" y="342.33332443237305" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fCs-Rh-ZFy" id="DBa-sG-jfz">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 8" secondaryText="Textures" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
