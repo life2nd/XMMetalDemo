@@ -13,8 +13,9 @@ extension Model {
         
         var uniforms = vertex
         var params = fragment
-        
+
         uniforms.modelMatrix = transform.modelMatrix
+        params.tiling = tiling
         
         encorder.setVertexBytes(&uniforms, length: MemoryLayout<UniformsChapter8>.stride, index: UniformsBufferChapter8.index)
         encorder.setFragmentBytes(&params, length: MemoryLayout<ParamsChapter8>.stride, index: ParamsBufferChapter8.index)
@@ -25,6 +26,7 @@ extension Model {
             }
             
             for submeshe in mesh.submeshes {
+                encorder.setFragmentTexture(submeshe.textures.baseColor, index: BaseColorChapter8.index)
                 encorder.drawIndexedPrimitives(type: .triangle,
                                                indexCount: submeshe.indexCount,
                                                indexType: submeshe.indexType,

@@ -14,6 +14,8 @@
 		0B9A73482D584D0500BE04D0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A73472D584D0500BE04D0 /* Model.swift */; };
 		0B9A734A2D584D4800BE04D0 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A73492D584D4800BE04D0 /* Submesh.swift */; };
 		0B9A734C2D584DFF00BE04D0 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A734B2D584DFF00BE04D0 /* Mesh.swift */; };
+		B619FE902D5C44E0002BA127 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619FE8F2D5C44E0002BA127 /* TextureController.swift */; };
+		B619FE922D5C73BB002BA127 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B619FE912D5C73BB002BA127 /* Textures.xcassets */; };
 		B61D58452D5630650081AAD5 /* XMSnowFlakeChapter7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D58442D5630650081AAD5 /* XMSnowFlakeChapter7ViewController.swift */; };
 		B61D58482D5630C50081AAD5 /* shaderChapter7.metal in Sources */ = {isa = PBXBuildFile; fileRef = B61D58472D5630C50081AAD5 /* shaderChapter7.metal */; };
 		B61D584A2D5631040081AAD5 /* modelChapter7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D58492D5631040081AAD5 /* modelChapter7.swift */; };
@@ -98,6 +100,8 @@
 		0B9A73472D584D0500BE04D0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0B9A73492D584D4800BE04D0 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		0B9A734B2D584DFF00BE04D0 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		B619FE8F2D5C44E0002BA127 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
+		B619FE912D5C73BB002BA127 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
 		B61D58442D5630650081AAD5 /* XMSnowFlakeChapter7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMSnowFlakeChapter7ViewController.swift; sourceTree = "<group>"; };
 		B61D58472D5630C50081AAD5 /* shaderChapter7.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaderChapter7.metal; sourceTree = "<group>"; };
 		B61D58492D5631040081AAD5 /* modelChapter7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelChapter7.swift; sourceTree = "<group>"; };
@@ -194,11 +198,13 @@
 				0B9A73402D57B71600BE04D0 /* shaderChapter8.metal */,
 				0B9A73452D584A0C00BE04D0 /* RendererChapter8.swift */,
 				B622FB562D5B313B002DF972 /* Rendering.swift */,
+				B619FE8F2D5C44E0002BA127 /* TextureController.swift */,
 				0B9A73472D584D0500BE04D0 /* Model.swift */,
 				B622FB542D5B29AE002DF972 /* Primitive.swift */,
 				0B9A73492D584D4800BE04D0 /* Submesh.swift */,
 				0B9A734B2D584DFF00BE04D0 /* Mesh.swift */,
 				B622FB522D5B2029002DF972 /* VertexDescriptorChapter8.swift */,
+				B619FE912D5C73BB002BA127 /* Textures.xcassets */,
 			);
 			path = "Chapter 8";
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 				B6A7FC4B2D27C69B001AC074 /* 富士山下.mp3 in Resources */,
 				B67D89F32D12F55600DF9F15 /* Base in Resources */,
 				B67D89EE2D12F55400DF9F15 /* Base in Resources */,
+				B619FE922D5C73BB002BA127 /* Textures.xcassets in Resources */,
 				B6E06F0C2D37E2B7006E82DB /* train.blend in Resources */,
 				B6E47C4C2D300DBC006FD306 /* part2.mp3 in Resources */,
 			);
@@ -609,6 +616,7 @@
 				B68D42CF2D3A47A900A6E7FA /* XMSnowFlakeChapter4ViewController.swift in Sources */,
 				B622FB572D5B313B002DF972 /* Rendering.swift in Sources */,
 				0B9A73462D584A0C00BE04D0 /* RendererChapter8.swift in Sources */,
+				B619FE902D5C44E0002BA127 /* TextureController.swift in Sources */,
 				B6A7FC552D27EB5B001AC074 /* XMAudioPlayer.swift in Sources */,
 				B6FFA64E2D3934F00051F4E7 /* shaderChapter3.metal in Sources */,
 				0B9A734C2D584DFF00BE04D0 /* Mesh.swift in Sources */,

@@ -51,3 +51,9 @@ extension BufferIndicesChapter8 {
         return Int(self.rawValue)
     }
 }
+
+extension TextureIndicesChapter8 {
+    var index: Int {
+        return Int(self.rawValue)
+    }
+}

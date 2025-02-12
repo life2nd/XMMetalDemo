@@ -11,6 +11,7 @@ class Model: Transformable {
     var transform = Transform()
     var meshes: [Mesh] = []
     var name: String = "Untitled"
+    var tiling: UInt32 = 1
     
     init() {
         
@@ -21,6 +22,7 @@ class Model: Transformable {
         
         let allocator = MTKMeshBufferAllocator(device: RendererChapter8.device)
         let asset = MDLAsset(url: assetURL, vertexDescriptor: .defaultLayoutChapter8, bufferAllocator: allocator)
+        asset.loadTextures()
         let (mdlMeshes, mtkMeshes) = try! MTKMesh.newMeshes(asset: asset, device: RendererChapter8.device)
         meshes = zip(mdlMeshes, mtkMeshes).map{
             Mesh(mdlMesh: $0.0, mtkMesh: $0.1)
@@ -30,4 +32,15 @@ class Model: Transformable {
     }
 }
 
-
+extension Model {
+    func setTexture(name: String, type: TextureIndicesChapter8) {
+        if let texture = TextureController.loadTexture(name: name) {
+            switch type {
+            case BaseColorChapter8:
+                meshes[0].submeshes[0].textures.baseColor = texture
+            default:
+                break
+            }
+        }
+    }
+}

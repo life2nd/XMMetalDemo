@@ -16,7 +16,18 @@ class RendererChapter8: NSObject {
     var depthStencilState: MTLDepthStencilState?
     
     lazy var house: Model = {
-       Model(name: "lowpoly-house.usdz")
+        let house = Model(name: "lowpoly-house.usdz")
+//        house.setTexture(name: "barn-color", type: BaseColorChapter8)
+        house.setTexture(name: "person", type: BaseColorChapter8)
+        return house
+    }()
+    
+    lazy var ground: Model = {
+        let ground = Model(name: "ground", primitiveType: .plane)
+//        ground.setTexture(name: "grass", type: BaseColorChapter8)
+        ground.setTexture(name: "barn-ground", type: BaseColorChapter8)
+        ground.tiling = 16
+        return ground
     }()
     
     var timer: Float = 0
@@ -88,6 +99,11 @@ extension RendererChapter8: MTKViewDelegate {
         
         house.rotation.y = sin(timer)
         house.render(encorder: renderEncorder, uniforms: uniforms, params: params)
+        
+        ground.scale = 40
+        ground.rotation.z = Float(90).degreesToRadians
+        ground.rotation.y = sin(timer)
+        ground.render(encorder: renderEncorder, uniforms: uniforms, params: params)
         
         renderEncorder.endEncoding()
         

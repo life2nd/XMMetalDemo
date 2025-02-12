@@ -19,6 +19,7 @@ typedef struct {
 typedef struct {
     uint width;
     uint height;
+    uint tiling;
 } ParamsChapter8;
 
 typedef enum {
@@ -33,5 +34,9 @@ typedef enum {
     NormalChapter8 = 1,
     UVChapter8 = 2
 } AttributesChapter8;
+
+typedef enum {
+    BaseColorChapter8 = 0
+} TextureIndicesChapter8;
 
 #endif /* CommonChapter8_h */

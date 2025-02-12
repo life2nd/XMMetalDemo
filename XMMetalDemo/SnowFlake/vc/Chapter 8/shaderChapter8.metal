@@ -34,9 +34,9 @@ vertex VertexOutChapter8 vertex_mainChapter8 (const VertexInChapter8 in [[stage_
     return out;
 }
 
-fragment float4 fragemnt_mainChapter8(VertexOutChapter8 in [[stage_in]], constant ParamsChapter8 &param [[buffer(ParamsBufferChapter8)]]) {
-    float4 sky = float4(0.34, 0.9, 1.0, 1.0);
-    float4 earth = float4(0.29, 0.58, 0.2, 1.0);
-    float intensity = in.normal.y * 0.5 + 0.5;
-    return mix(earth, sky, intensity);
+fragment float4 fragemnt_mainChapter8(VertexOutChapter8 in [[stage_in]], constant ParamsChapter8 &param [[buffer(ParamsBufferChapter8)]], texture2d<float> baseColorTexture [[texture(BaseColorChapter8)]]) {
+    
+    constexpr sampler textureSampler(filter::linear, address::repeat, mip_filter::linear, max_anisotropy(8));
+    float3 baseColor = baseColorTexture.sample(textureSampler, in.uv * param.tiling).rgb;
+    return float4(baseColor, 1);
 }
