@@ -28,6 +28,16 @@
 		B66C1B442D48DD8D00EA4055 /* VertexDescriptorChapter6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B432D48DD8D00EA4055 /* VertexDescriptorChapter6.swift */; };
 		B66C1B462D50F77D00EA4055 /* modelChapter6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B452D50F77D00EA4055 /* modelChapter6.swift */; };
 		B66C1B482D50FA3900EA4055 /* RendererChapter6.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66C1B472D50FA3900EA4055 /* RendererChapter6.swift */; };
+		B66D70DF2D5CC54F00FF984D /* MeshChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D42D5CC54F00FF984D /* MeshChapter9.swift */; };
+		B66D70E02D5CC54F00FF984D /* ModelChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D52D5CC54F00FF984D /* ModelChapter9.swift */; };
+		B66D70E12D5CC54F00FF984D /* PrimitiveChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D62D5CC54F00FF984D /* PrimitiveChapter9.swift */; };
+		B66D70E22D5CC54F00FF984D /* RendererChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D72D5CC54F00FF984D /* RendererChapter9.swift */; };
+		B66D70E32D5CC54F00FF984D /* RenderingChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D82D5CC54F00FF984D /* RenderingChapter9.swift */; };
+		B66D70E42D5CC54F00FF984D /* shaderChapter9.metal in Sources */ = {isa = PBXBuildFile; fileRef = B66D70D92D5CC54F00FF984D /* shaderChapter9.metal */; };
+		B66D70E52D5CC54F00FF984D /* SubmeshChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70DA2D5CC54F00FF984D /* SubmeshChapter9.swift */; };
+		B66D70E62D5CC54F00FF984D /* TextureControllerChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70DB2D5CC54F00FF984D /* TextureControllerChapter9.swift */; };
+		B66D70E72D5CC54F00FF984D /* VertexDescriptorChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70DC2D5CC54F00FF984D /* VertexDescriptorChapter9.swift */; };
+		B66D70E82D5CC54F00FF984D /* XMSnowFlakeChapter9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70DD2D5CC54F00FF984D /* XMSnowFlakeChapter9ViewController.swift */; };
 		B67D89E72D12F55400DF9F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89E62D12F55400DF9F15 /* AppDelegate.swift */; };
 		B67D89E92D12F55400DF9F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89E82D12F55400DF9F15 /* SceneDelegate.swift */; };
 		B67D89EB2D12F55400DF9F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89EA2D12F55400DF9F15 /* ViewController.swift */; };
@@ -116,6 +126,17 @@
 		B66C1B432D48DD8D00EA4055 /* VertexDescriptorChapter6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorChapter6.swift; sourceTree = "<group>"; };
 		B66C1B452D50F77D00EA4055 /* modelChapter6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelChapter6.swift; sourceTree = "<group>"; };
 		B66C1B472D50FA3900EA4055 /* RendererChapter6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererChapter6.swift; sourceTree = "<group>"; };
+		B66D70D32D5CC54F00FF984D /* CommonChapter9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonChapter9.h; sourceTree = "<group>"; };
+		B66D70D42D5CC54F00FF984D /* MeshChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeshChapter9.swift; sourceTree = "<group>"; };
+		B66D70D52D5CC54F00FF984D /* ModelChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelChapter9.swift; sourceTree = "<group>"; };
+		B66D70D62D5CC54F00FF984D /* PrimitiveChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitiveChapter9.swift; sourceTree = "<group>"; };
+		B66D70D72D5CC54F00FF984D /* RendererChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendererChapter9.swift; sourceTree = "<group>"; };
+		B66D70D82D5CC54F00FF984D /* RenderingChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderingChapter9.swift; sourceTree = "<group>"; };
+		B66D70D92D5CC54F00FF984D /* shaderChapter9.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaderChapter9.metal; sourceTree = "<group>"; };
+		B66D70DA2D5CC54F00FF984D /* SubmeshChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmeshChapter9.swift; sourceTree = "<group>"; };
+		B66D70DB2D5CC54F00FF984D /* TextureControllerChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureControllerChapter9.swift; sourceTree = "<group>"; };
+		B66D70DC2D5CC54F00FF984D /* VertexDescriptorChapter9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptorChapter9.swift; sourceTree = "<group>"; };
+		B66D70DD2D5CC54F00FF984D /* XMSnowFlakeChapter9ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMSnowFlakeChapter9ViewController.swift; sourceTree = "<group>"; };
 		B67D89E32D12F55400DF9F15 /* XMMetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMMetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67D89E62D12F55400DF9F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67D89E82D12F55400DF9F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +225,6 @@
 				0B9A73492D584D4800BE04D0 /* Submesh.swift */,
 				0B9A734B2D584DFF00BE04D0 /* Mesh.swift */,
 				B622FB522D5B2029002DF972 /* VertexDescriptorChapter8.swift */,
-				B619FE912D5C73BB002BA127 /* Textures.xcassets */,
 			);
 			path = "Chapter 8";
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				0B9A73422D5849D300BE04D0 /* lowpoly-house.usdz */,
+				B619FE912D5C73BB002BA127 /* Textures.xcassets */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +259,25 @@
 			);
 			path = "Chapter 7";
 			sourceTree = "<group>";
+		};
+		B66D70DE2D5CC54F00FF984D /* Chapter 9 */ = {
+			isa = PBXGroup;
+			children = (
+				B66D70D32D5CC54F00FF984D /* CommonChapter9.h */,
+				B66D70D42D5CC54F00FF984D /* MeshChapter9.swift */,
+				B66D70D52D5CC54F00FF984D /* ModelChapter9.swift */,
+				B66D70D62D5CC54F00FF984D /* PrimitiveChapter9.swift */,
+				B66D70D72D5CC54F00FF984D /* RendererChapter9.swift */,
+				B66D70D82D5CC54F00FF984D /* RenderingChapter9.swift */,
+				B66D70D92D5CC54F00FF984D /* shaderChapter9.metal */,
+				B66D70DA2D5CC54F00FF984D /* SubmeshChapter9.swift */,
+				B66D70DB2D5CC54F00FF984D /* TextureControllerChapter9.swift */,
+				B66D70DC2D5CC54F00FF984D /* VertexDescriptorChapter9.swift */,
+				B66D70DD2D5CC54F00FF984D /* XMSnowFlakeChapter9ViewController.swift */,
+			);
+			name = "Chapter 9";
+			path = "XMMetalDemo/SnowFlake/vc/Chapter 9";
+			sourceTree = SOURCE_ROOT;
 		};
 		B67D89DA2D12F55400DF9F15 = {
 			isa = PBXGroup;
@@ -330,6 +370,7 @@
 				B69D1AA92D375DA1006B95E1 /* XMSnowFlakeViewController.swift */,
 				B6C4000A2D424A0A00CABF35 /* Utility */,
 				0B9A73442D5849ED00BE04D0 /* Models */,
+				B66D70DE2D5CC54F00FF984D /* Chapter 9 */,
 				0B9A73372D57AE2F00BE04D0 /* Chapter 8 */,
 				B61D58462D56306A0081AAD5 /* Chapter 7 */,
 				B6C400072D42492A00CABF35 /* Chapter 6 */,
@@ -586,11 +627,15 @@
 				B6E71EF72D3763770086D303 /* XMSnowFlakeChapter1ViewController.swift in Sources */,
 				B69D1AAA2D375DA1006B95E1 /* XMSnowFlakeViewController.swift in Sources */,
 				B6A7FC522D27C84A001AC074 /* XMAudioViewController.swift in Sources */,
+				B66D70E52D5CC54F00FF984D /* SubmeshChapter9.swift in Sources */,
 				B68D42E32D3E373600A6E7FA /* RendererChapter5.swift in Sources */,
 				B6A909642D37D37F0085DA34 /* XMSnowFlakeChapter2ViewController.swift in Sources */,
 				B68D42DF2D3E34D500A6E7FA /* Triangle.swift in Sources */,
+				B66D70E72D5CC54F00FF984D /* VertexDescriptorChapter9.swift in Sources */,
 				B67D89EB2D12F55400DF9F15 /* ViewController.swift in Sources */,
+				B66D70E22D5CC54F00FF984D /* RendererChapter9.swift in Sources */,
 				B6FFA64B2D3934A50051F4E7 /* XMSnowFlakeChapter3ViewController.swift in Sources */,
+				B66D70E82D5CC54F00FF984D /* XMSnowFlakeChapter9ViewController.swift in Sources */,
 				B68D42D42D3A47EC00A6E7FA /* shaderChapter4.metal in Sources */,
 				0B9A73362D57AE2900BE04D0 /* XMSnowFlakeChapter8ViewController.swift in Sources */,
 				B6A909672D37D5E00085DA34 /* shaderChapter2.metal in Sources */,
@@ -598,11 +643,13 @@
 				B66C1B422D48DC3C00EA4055 /* Transform.swift in Sources */,
 				B622FB532D5B2029002DF972 /* VertexDescriptorChapter8.swift in Sources */,
 				0B9A73482D584D0500BE04D0 /* Model.swift in Sources */,
+				B66D70E32D5CC54F00FF984D /* RenderingChapter9.swift in Sources */,
 				B66C1B482D50FA3900EA4055 /* RendererChapter6.swift in Sources */,
 				B6E71EFA2D3788DF0086D303 /* shader.metal in Sources */,
 				B61D58452D5630650081AAD5 /* XMSnowFlakeChapter7ViewController.swift in Sources */,
 				B68D42D82D3A742100A6E7FA /* VertexDescriptor.swift in Sources */,
 				B61D584A2D5631040081AAD5 /* modelChapter7.swift in Sources */,
+				B66D70E62D5CC54F00FF984D /* TextureControllerChapter9.swift in Sources */,
 				B66C1B442D48DD8D00EA4055 /* VertexDescriptorChapter6.swift in Sources */,
 				B68D42DD2D3E344100A6E7FA /* shaderChapter5.metal in Sources */,
 				B61D584F2D5631B60081AAD5 /* VertexDescriptorChapter7.swift in Sources */,
@@ -614,17 +661,21 @@
 				B6E47C4E2D3101C0006FD306 /* Tools.swift in Sources */,
 				B68D42D62D3A4C7D00A6E7FA /* Quad.swift in Sources */,
 				B68D42CF2D3A47A900A6E7FA /* XMSnowFlakeChapter4ViewController.swift in Sources */,
+				B66D70DF2D5CC54F00FF984D /* MeshChapter9.swift in Sources */,
 				B622FB572D5B313B002DF972 /* Rendering.swift in Sources */,
 				0B9A73462D584A0C00BE04D0 /* RendererChapter8.swift in Sources */,
 				B619FE902D5C44E0002BA127 /* TextureController.swift in Sources */,
+				B66D70E02D5CC54F00FF984D /* ModelChapter9.swift in Sources */,
 				B6A7FC552D27EB5B001AC074 /* XMAudioPlayer.swift in Sources */,
 				B6FFA64E2D3934F00051F4E7 /* shaderChapter3.metal in Sources */,
 				0B9A734C2D584DFF00BE04D0 /* Mesh.swift in Sources */,
 				B6C400092D424A0300CABF35 /* MathLibrary.swift in Sources */,
 				B68D42CD2D3A2B9200A6E7FA /* Renderer.swift in Sources */,
+				B66D70E12D5CC54F00FF984D /* PrimitiveChapter9.swift in Sources */,
 				B61D584C2D5631340081AAD5 /* RendererChapter7.swift in Sources */,
 				B6C4000D2D424D2A00CABF35 /* shaderChapter6.metal in Sources */,
 				B67D89E92D12F55400DF9F15 /* SceneDelegate.swift in Sources */,
+				B66D70E42D5CC54F00FF984D /* shaderChapter9.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

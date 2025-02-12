@@ -294,6 +294,15 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 8" secondaryText="Textures" prefersSideBySideTextAndSecondaryText="YES"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="gX8-5J-qoU">
+                                        <rect key="frame" x="20" y="388.66665649414062" width="353" height="46.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gX8-5J-qoU" id="a2e-vh-w9K">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="46.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <listContentConfiguration key="contentConfiguration" style="sidebarHeader" text="Chapter 9" secondaryText="Navigating a 3D Scene" prefersSideBySideTextAndSecondaryText="YES"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
