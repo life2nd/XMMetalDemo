@@ -11,8 +11,14 @@ enum InputControllerKeyCode {
 case leftArrow, rightArrow, upArrow, downArrow, keyW, keyS, keyA, keyD
 }
 
+enum CameraType {
+case fpCamera, orthoCamera
+}
+
 class InputControllerChapter9 {
     static let shared = InputControllerChapter9()
+    
+    var cameraType: CameraType = .fpCamera
     
     var keyPressed: Set<InputControllerKeyCode> = []
     

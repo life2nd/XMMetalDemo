@@ -26,17 +26,31 @@ struct GameSceneChapter9 {
     
     lazy var models: [ModelChapter9] = [house, ground]
     
-    var camera = FPCameraChapter9()
+    var fpCamera = FPCameraChapter9()
+    var ortCamera = OrthographicCameraChapter9()
+    
+    var camera: CameraChapter9 {
+        if InputControllerChapter9.shared.cameraType == .orthoCamera {
+            ortCamera
+        }
+        else {
+            fpCamera
+        }
+    }
     
     init() {
-        camera.position = [0, 1.4, -4.0]
+        fpCamera.position = [0, 1.4, -4.0]
+        ortCamera.position = [0, 2, 0]
+        ortCamera.rotation.x = .pi/2
     }
     
     mutating func update(deltaTime: Float) {
-        camera.update(deltaTime: deltaTime)
+        fpCamera.update(deltaTime: deltaTime)
+        ortCamera.update(deltaTime: deltaTime)
     }
     
     mutating func update(size: CGSize) {
-        camera.update(size: size)
+        fpCamera.update(size: size)
+        ortCamera.update(size: size)
     }
 }

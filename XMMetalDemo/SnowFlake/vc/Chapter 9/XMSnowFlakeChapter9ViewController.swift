@@ -52,6 +52,15 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         return ctrl
     }()
     
+    lazy var changeBtn: UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(systemName: "eye", withConfiguration: UIImage.SymbolConfiguration(pointSize: 50)), for: .normal)
+        btn.addTarget(self, action: #selector(handleEyeClick(btn:)), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.sizeToFit()
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,6 +90,7 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         view.addSubview(aCtrl)
         view.addSubview(sCtrl)
         view.addSubview(dCtrl)
+        view.addSubview(changeBtn)
         
         leftCtrl.setIconImage(UIImage(systemName: "arrowshape.left.fill")!)
         rightCtrl.setIconImage(UIImage(systemName: "arrowshape.right.fill")!)
@@ -155,8 +165,12 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
             sCtrl.widthAnchor.constraint(equalTo: wCtrl.widthAnchor),
             sCtrl.heightAnchor.constraint(equalTo: wCtrl.heightAnchor),
             sCtrl.centerXAnchor.constraint(equalTo: wCtrl.centerXAnchor),
-            sCtrl.topAnchor.constraint(equalTo: wCtrl.bottomAnchor, constant: 50)
+            sCtrl.topAnchor.constraint(equalTo: wCtrl.bottomAnchor, constant: 50),
             
+            changeBtn.widthAnchor.constraint(equalToConstant: 50),
+            changeBtn.heightAnchor.constraint(equalToConstant: 50),
+            changeBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8),
+            changeBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 200)
         ])
     }
     
@@ -168,6 +182,15 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         }
         else {
             InputControllerChapter9.shared.inputKeyCodeEndPressed(keyCode)
+        }
+    }
+    
+    @objc func handleEyeClick(btn: UIButton) {
+        if InputControllerChapter9.shared.cameraType == .fpCamera {
+            InputControllerChapter9.shared.cameraType = .orthoCamera
+        }
+        else {
+            InputControllerChapter9.shared.cameraType = .fpCamera
         }
     }
 }
