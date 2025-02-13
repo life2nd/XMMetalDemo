@@ -42,6 +42,10 @@
 		B66D70EC2D5D983900FF984D /* CameraChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70EB2D5D983900FF984D /* CameraChapter9.swift */; };
 		B66D70EE2D5DC4D900FF984D /* InputControllerChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70ED2D5DC4D900FF984D /* InputControllerChapter9.swift */; };
 		B66D70F02D5DD67A00FF984D /* MovementChapter9.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70EF2D5DD67A00FF984D /* MovementChapter9.swift */; };
+		B66D70F22D5E133300FF984D /* XMSnowFlakeDemoOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70F12D5E133300FF984D /* XMSnowFlakeDemoOneViewController.swift */; };
+		B66D70F52D5E146B00FF984D /* RenderDemoOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70F42D5E146B00FF984D /* RenderDemoOne.swift */; };
+		B66D70F72D5E156000FF984D /* QuadDemoOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66D70F62D5E156000FF984D /* QuadDemoOne.swift */; };
+		B66D70F92D5E156C00FF984D /* shaderDemoOne.metal in Sources */ = {isa = PBXBuildFile; fileRef = B66D70F82D5E156C00FF984D /* shaderDemoOne.metal */; };
 		B67D89E72D12F55400DF9F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89E62D12F55400DF9F15 /* AppDelegate.swift */; };
 		B67D89E92D12F55400DF9F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89E82D12F55400DF9F15 /* SceneDelegate.swift */; };
 		B67D89EB2D12F55400DF9F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D89EA2D12F55400DF9F15 /* ViewController.swift */; };
@@ -145,6 +149,10 @@
 		B66D70EB2D5D983900FF984D /* CameraChapter9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraChapter9.swift; sourceTree = "<group>"; };
 		B66D70ED2D5DC4D900FF984D /* InputControllerChapter9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputControllerChapter9.swift; sourceTree = "<group>"; };
 		B66D70EF2D5DD67A00FF984D /* MovementChapter9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementChapter9.swift; sourceTree = "<group>"; };
+		B66D70F12D5E133300FF984D /* XMSnowFlakeDemoOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMSnowFlakeDemoOneViewController.swift; sourceTree = "<group>"; };
+		B66D70F42D5E146B00FF984D /* RenderDemoOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderDemoOne.swift; sourceTree = "<group>"; };
+		B66D70F62D5E156000FF984D /* QuadDemoOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadDemoOne.swift; sourceTree = "<group>"; };
+		B66D70F82D5E156C00FF984D /* shaderDemoOne.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaderDemoOne.metal; sourceTree = "<group>"; };
 		B67D89E32D12F55400DF9F15 /* XMMetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMMetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67D89E62D12F55400DF9F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67D89E82D12F55400DF9F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +299,17 @@
 			path = "XMMetalDemo/SnowFlake/vc/Chapter 9";
 			sourceTree = SOURCE_ROOT;
 		};
+		B66D70F32D5E133900FF984D /* DemoOne */ = {
+			isa = PBXGroup;
+			children = (
+				B66D70F12D5E133300FF984D /* XMSnowFlakeDemoOneViewController.swift */,
+				B66D70F42D5E146B00FF984D /* RenderDemoOne.swift */,
+				B66D70F62D5E156000FF984D /* QuadDemoOne.swift */,
+				B66D70F82D5E156C00FF984D /* shaderDemoOne.metal */,
+			);
+			path = DemoOne;
+			sourceTree = "<group>";
+		};
 		B67D89DA2D12F55400DF9F15 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +401,7 @@
 				B69D1AA92D375DA1006B95E1 /* XMSnowFlakeViewController.swift */,
 				B6C4000A2D424A0A00CABF35 /* Utility */,
 				0B9A73442D5849ED00BE04D0 /* Models */,
+				B66D70F32D5E133900FF984D /* DemoOne */,
 				B66D70DE2D5CC54F00FF984D /* Chapter 9 */,
 				0B9A73372D57AE2F00BE04D0 /* Chapter 8 */,
 				B61D58462D56306A0081AAD5 /* Chapter 7 */,
@@ -643,6 +663,7 @@
 				B68D42E32D3E373600A6E7FA /* RendererChapter5.swift in Sources */,
 				B6A909642D37D37F0085DA34 /* XMSnowFlakeChapter2ViewController.swift in Sources */,
 				B68D42DF2D3E34D500A6E7FA /* Triangle.swift in Sources */,
+				B66D70F72D5E156000FF984D /* QuadDemoOne.swift in Sources */,
 				B66D70E72D5CC54F00FF984D /* VertexDescriptorChapter9.swift in Sources */,
 				B67D89EB2D12F55400DF9F15 /* ViewController.swift in Sources */,
 				B66D70E22D5CC54F00FF984D /* RendererChapter9.swift in Sources */,
@@ -660,6 +681,7 @@
 				B6E71EFA2D3788DF0086D303 /* shader.metal in Sources */,
 				B61D58452D5630650081AAD5 /* XMSnowFlakeChapter7ViewController.swift in Sources */,
 				B68D42D82D3A742100A6E7FA /* VertexDescriptor.swift in Sources */,
+				B66D70F22D5E133300FF984D /* XMSnowFlakeDemoOneViewController.swift in Sources */,
 				B61D584A2D5631040081AAD5 /* modelChapter7.swift in Sources */,
 				B66D70E62D5CC54F00FF984D /* TextureControllerChapter9.swift in Sources */,
 				B66C1B442D48DD8D00EA4055 /* VertexDescriptorChapter6.swift in Sources */,
@@ -674,11 +696,13 @@
 				B69C7C7B2D2E1A1500B8147A /* XMNewAudioPlayer.swift in Sources */,
 				B6E47C4E2D3101C0006FD306 /* Tools.swift in Sources */,
 				B66D70EA2D5D922F00FF984D /* GameSceneChapter9.swift in Sources */,
+				B66D70F52D5E146B00FF984D /* RenderDemoOne.swift in Sources */,
 				B68D42D62D3A4C7D00A6E7FA /* Quad.swift in Sources */,
 				B68D42CF2D3A47A900A6E7FA /* XMSnowFlakeChapter4ViewController.swift in Sources */,
 				B66D70DF2D5CC54F00FF984D /* MeshChapter9.swift in Sources */,
 				B622FB572D5B313B002DF972 /* Rendering.swift in Sources */,
 				B66D70EE2D5DC4D900FF984D /* InputControllerChapter9.swift in Sources */,
+				B66D70F92D5E156C00FF984D /* shaderDemoOne.metal in Sources */,
 				0B9A73462D584A0C00BE04D0 /* RendererChapter8.swift in Sources */,
 				B619FE902D5C44E0002BA127 /* TextureController.swift in Sources */,
 				B66D70E02D5CC54F00FF984D /* ModelChapter9.swift in Sources */,
