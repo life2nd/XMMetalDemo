@@ -22,6 +22,16 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         return ctrl
     }()
     
+    lazy var upCtrl: XMControlEvent = {
+        let ctrl = XMControlEvent()
+        return ctrl
+    }()
+    
+    lazy var downCtrl: XMControlEvent = {
+        let ctrl = XMControlEvent()
+        return ctrl
+    }()
+    
     lazy var wCtrl: XMControlEvent = {
         let ctrl = XMControlEvent()
         return ctrl
@@ -65,6 +75,8 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
     private func buildCtrl() {
         view.addSubview(leftCtrl)
         view.addSubview(rightCtrl)
+        view.addSubview(upCtrl)
+        view.addSubview(downCtrl)
         view.addSubview(wCtrl)
         view.addSubview(aCtrl)
         view.addSubview(sCtrl)
@@ -72,6 +84,8 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         
         leftCtrl.setIconImage(UIImage(systemName: "arrowshape.left.fill")!)
         rightCtrl.setIconImage(UIImage(systemName: "arrowshape.right.fill")!)
+        upCtrl.setIconImage(UIImage(systemName: "arrowshape.up.fill")!)
+        downCtrl.setIconImage(UIImage(systemName: "arrowshape.down.fill")!)
         wCtrl.setIconImage(UIImage(systemName: "arrowshape.up.fill")!)
         aCtrl.setIconImage(UIImage(systemName: "arrowshape.left.fill")!)
         dCtrl.setIconImage(UIImage(systemName: "arrowshape.right.fill")!)
@@ -82,6 +96,12 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
         }
         rightCtrl.touchHandler = { [weak self] action in
             self?.handleAction(action, keyCode: .rightArrow)
+        }
+        upCtrl.touchHandler = { [weak self] action in
+            self?.handleAction(action, keyCode: .upArrow)
+        }
+        downCtrl.touchHandler = { [weak self] action in
+            self?.handleAction(action, keyCode: .downArrow)
         }
         wCtrl.touchHandler = { [weak self] action in
             self?.handleAction(action, keyCode: .keyW)
@@ -104,8 +124,18 @@ class XMSnowFlakeChapter9ViewController: UIViewController {
             
             leftCtrl.widthAnchor.constraint(equalTo: rightCtrl.widthAnchor),
             leftCtrl.heightAnchor.constraint(equalTo: rightCtrl.heightAnchor),
-            leftCtrl.rightAnchor.constraint(equalTo: rightCtrl.leftAnchor, constant: -10),
+            leftCtrl.rightAnchor.constraint(equalTo: rightCtrl.leftAnchor, constant: -50),
             leftCtrl.centerYAnchor.constraint(equalTo: rightCtrl.centerYAnchor),
+            
+            upCtrl.widthAnchor.constraint(equalToConstant: 50),
+            upCtrl.heightAnchor.constraint(equalToConstant: 50),
+            upCtrl.bottomAnchor.constraint(equalTo: rightCtrl.topAnchor),
+            upCtrl.rightAnchor.constraint(equalTo: rightCtrl.leftAnchor),
+            
+            downCtrl.widthAnchor.constraint(equalTo: upCtrl.widthAnchor),
+            downCtrl.heightAnchor.constraint(equalTo: upCtrl.heightAnchor),
+            downCtrl.centerXAnchor.constraint(equalTo: upCtrl.centerXAnchor),
+            downCtrl.topAnchor.constraint(equalTo: upCtrl.bottomAnchor, constant: 50),
             
             aCtrl.widthAnchor.constraint(equalToConstant: 50),
             aCtrl.heightAnchor.constraint(equalToConstant: 50),

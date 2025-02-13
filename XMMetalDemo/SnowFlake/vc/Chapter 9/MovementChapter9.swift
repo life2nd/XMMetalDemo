@@ -29,6 +29,12 @@ extension MovementChapter9 {
         if input.keyPressed.contains(.rightArrow) {
             transfom.rotation.y += rotationAmount
         }
+        if input.keyPressed.contains(.upArrow) {
+            transfom.rotation.x -= rotationAmount
+        }
+        if input.keyPressed.contains(.downArrow) {
+            transfom.rotation.x += rotationAmount
+        }
         
         var direction: float3 = .zero
         if input.keyPressed.contains(.keyW) {

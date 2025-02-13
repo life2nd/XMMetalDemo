@@ -40,6 +40,8 @@ struct FPCameraChapter9: CameraChapter9 {
     mutating func update(deltaTime: Float) {
         let transform = updateInpt(deltaTime: deltaTime)
         rotation += transform.rotation
+        rotation.x = max(-.pi/2, min(rotation.x, .pi/2))
+        
         position += transform.position
     }
 }

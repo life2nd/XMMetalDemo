@@ -8,7 +8,7 @@
 import MetalKit
 
 enum InputControllerKeyCode {
-case leftArrow, rightArrow, keyW, keyS, keyA, keyD
+case leftArrow, rightArrow, upArrow, downArrow, keyW, keyS, keyA, keyD
 }
 
 class InputControllerChapter9 {
