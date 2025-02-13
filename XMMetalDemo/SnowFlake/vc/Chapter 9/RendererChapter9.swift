@@ -15,20 +15,9 @@ class RendererChapter9: NSObject {
     var pipelineState: MTLRenderPipelineState!
     var depthStencilState: MTLDepthStencilState?
     
-    lazy var house: ModelChapter9 = {
-        let house = ModelChapter9(name: "lowpoly-house.usdz")
-        house.setTexture(name: "barn-color", type: BaseColorChapter9)
-        return house
-    }()
+    lazy var scene = GameSceneChapter9()
     
-    lazy var ground: ModelChapter9 = {
-        let ground = ModelChapter9(name: "ground", primitiveType: .plane)
-        ground.setTexture(name: "barn-ground", type: BaseColorChapter9)
-        ground.tiling = 16
-        return ground
-    }()
-    
-    var timer: Float = 0
+    var lastTime: Double = CFAbsoluteTimeGetCurrent()
     var uniforms = UniformsChapter9()
     var params = ParamsChapter9()
     
@@ -75,9 +64,7 @@ class RendererChapter9: NSObject {
 
 extension RendererChapter9: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        let aspect = Float(view.bounds.width) / Float(view.bounds.height)
-        let projectionMatrix = float4x4(projectionFov: Float(70).degreesToRadians, near: 0.1, far: 100, aspect: aspect)
-        uniforms.projectionMatrix = projectionMatrix
+        scene.update(size: size)
         
         params.width = uint(size.width)
         params.height = uint(size.height)
@@ -89,19 +76,20 @@ extension RendererChapter9: MTKViewDelegate {
         let renderEncorder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)
         else { return }
         
-        timer += 0.005
-        uniforms.viewMatrix = float4x4(translation: [0, 1.4, -4.0]).inverse
-        
         renderEncorder.setDepthStencilState(depthStencilState)
         renderEncorder.setRenderPipelineState(pipelineState)
         
-        house.rotation.y = sin(timer)
-        house.renderChapter9(encorder: renderEncorder, uniforms: uniforms, params: params)
+        let currentTime = CFAbsoluteTimeGetCurrent()
+        let deltaTime = Float(currentTime - lastTime)
+        lastTime = currentTime
+        scene.update(deltaTime: deltaTime)
         
-        ground.scale = 40
-        ground.rotation.z = Float(90).degreesToRadians
-        ground.rotation.y = sin(timer)
-        ground.renderChapter9(encorder: renderEncorder, uniforms: uniforms, params: params)
+        uniforms.viewMatrix = scene.camera.viewMatrix
+        uniforms.projectionMatrix = scene.camera.projectionMatrix
+        
+        for model in scene.models {
+            model.renderChapter9(encorder: renderEncorder, uniforms: uniforms, params: params)
+        }
         
         renderEncorder.endEncoding()
         
